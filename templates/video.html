@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>L O L u've been rickroled ахаха loser
+    </title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://preview.redd.it/random-question-but-does-anyone-have-versions-of-this-cat-v0-ya8qikz9kn0f1.png?auto=webp&s=c2fdba9a3904ab3bec9e7367e380f66343c2929a'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .ehehe-cat-bg {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS32fRWcoVB6ek0WJPxk-22IY856BKj5vdxgw&s') !important;
+        }
+
+        .video-wrapper {
+            width: 50%;
+            max-width: 900px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 56.25vw; 
+            max-height: 562.5px;
+            border: none;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: #ffa1a1; }
+    </style>
+</head>
+<body id="main-body">
+    <audio id="fail-audio" src="/static/Videos/U_ARE_failure.mp3" preload="auto"></audio>
+    <a href="/?show_lol=1" id="link-trigger" class="back-link">
+        ← вернуться с абсолютным поражением
+    </a>
+    <div class="video-wrapper">
+        <video width="100%" autoplay loop playsinline>
+            <source src="/static/Videos/xvFZjo5PgG0.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        const body = document.getElementById('main-body');
+        const link = document.getElementById('link-trigger');
+        const sound = document.getElementById('fail-audio');
+        link.addEventListener('mouseenter', () => {
+            body.classList.add('ehehe-cat-bg');
+            sound.currentTime = 0;
+            sound.play();
+        });
+        link.addEventListener('mouseleave', () => {
+            body.classList.remove('ehehe-cat-bg');
+            sound.pause();
+        });
+    </script>
+
+</body>
+</html>

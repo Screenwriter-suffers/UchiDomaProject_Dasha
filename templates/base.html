@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <title>{% block title %}{% endblock title %}</title>
+  <style>
+    body {
+      background-image: 
+                    linear-gradient(rgba(255, 255, 255, 0.897), rgba(145, 145, 145, 0.5)),
+                    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDw6qtw-idq0Y2dQ9_WlkA6YPh3FsQSpIc3g&s');
+                    
+      background-size:  cover, 100% 100%;
+      background-repeat: no-repeat, no-repeat;
+      background-attachment: fixed, fixed;
+      background-position: center center, center center;
+    }
+
+    #gif-overlay {
+      position: fixed;
+      top: 10; left: 10; width: 100%; height: 100%;
+      z-index: 1; 
+      background-image: url('https://media1.tenor.com/m/-YlzaY7PXb4AAAAd/among-us-amogus.gif');
+      background-size: cover;
+      background-position: center;
+      opacity: 0; 
+      pointer-events: none;
+    }
+
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      20% { opacity: 0; } 
+      80% { opacity: 0.1; } 
+      100% { opacity: 0; }  
+    }
+
+    .animate-gif {
+      animation: fadeInOut 3s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <div id="gif-overlay"></div>
+  <audio id="word-sound" src="{{ url_for('static', filename='Videos/Miau.mp3') }}" preload="auto"></audio>
+  <audio id="amogus-sound" src="{{ url_for('static', filename='Videos/VERY_SUS.mp3') }}" preload="auto"></audio>
+
+
+
+  <audio id="meow_1" src="{{ url_for('static', filename='Videos/Meows/meow_1.mp3') }}" preload="auto"></audio>
+  <audio id="meow_2" src="{{ url_for('static', filename='Videos/Meows/meow_2.mp3') }}" preload="auto"></audio>
+  <audio id="meow_3" src="{{ url_for('static', filename='Videos/Meows/meow_3.mp3') }}" preload="auto"></audio>
+  <audio id="meow_4" src="{{ url_for('static', filename='Videos/Meows/meow_4.mp3') }}" preload="auto"></audio>
+  <audio id="meow_5" src="{{ url_for('static', filename='Videos/Meows/meow_5.mp3') }}" preload="auto"></audio>
+  <audio id="meow_6" src="{{ url_for('static', filename='Videos/Meows/meow_6.mp3') }}" preload="auto"></audio>
+  <audio id="meow_7" src="{{ url_for('static', filename='Videos/Meows/meow_7.mp3') }}" preload="auto"></audio>
+  <audio id="meow_8" src="{{ url_for('static', filename='Videos/Meows/meow_8.mp3') }}" preload="auto"></audio>
+  <audio id="meow_9" src="{{ url_for('static', filename='Videos/Meows/meow_9.mp3') }}" preload="auto"></audio>
+  <audio id="meow_10" src="{{ url_for('static', filename='Videos/Meows/meow_10.mp3') }}" preload="auto"></audio>
+  <audio id="meow_11" src="{{ url_for('static', filename='Videos/Meows/meow_11.mp3') }}" preload="auto"></audio>
+  <audio id="meow_12" src="{{ url_for('static', filename='Videos/Meows/meow_12.mp3') }}" preload="auto"></audio>
+  <audio id="meow_13" src="{{ url_for('static', filename='Videos/Meows/meow_13.mp3') }}" preload="auto"></audio>
+  <audio id="meow_14" src="{{ url_for('static', filename='Videos/Meows/meow_14.mp3') }}" preload="auto"></audio>
+  <audio id="meow_15" src="{{ url_for('static', filename='Videos/Meows/meow_15.mp3') }}" preload="auto"></audio>
+  <audio id="meow_16" src="{{ url_for('static', filename='Videos/Meows/meow_16.mp3') }}" preload="auto"></audio>
+  <audio id="meow_17" src="{{ url_for('static', filename='Videos/Meows/meow_17.mp3') }}" preload="auto"></audio>
+  <audio id="meow_18" src="{{ url_for('static', filename='Videos/Meows/meow_18.mp3') }}" preload="auto"></audio>
+  <audio id="meow_19" src="{{ url_for('static', filename='Videos/Meows/meow_19.mp3') }}" preload="auto"></audio>
+  <audio id="meow_20" src="{{ url_for('static', filename='Videos/Meows/meow_20.mp3') }}" preload="auto"></audio>
+  <audio id="meow_21" src="{{ url_for('static', filename='Videos/Meows/meow_21.mp3') }}" preload="auto"></audio>
+  <audio id="meow_22" src="{{ url_for('static', filename='Videos/Meows/meow_22.mp3') }}" preload="auto"></audio>
+  <audio id="meow_23" src="{{ url_for('static', filename='Videos/Meows/meow_23.mp3') }}" preload="auto"></audio>
+  <audio id="meow_24" src="{{ url_for('static', filename='Videos/Meows/meow_24.mp3') }}" preload="auto"></audio>
+  <audio id="meow_25" src="{{ url_for('static', filename='Videos/Meows/meow_25.mp3') }}" preload="auto"></audio>
+  <audio id="meow_26" src="{{ url_for('static', filename='Videos/Meows/meow_26.mp3') }}" preload="auto"></audio>
+
+
+
+
+  <img src="https://foni.papik.pro/uploads/posts/2024-09/foni-papik-pro-ruum-p-kartinki-amogus-na-prozrachnom-fone-6.png" 
+       onclick="let s=document.getElementById('amogus-sound'); s.currentTime=0; s.play();
+       let g=document.getElementById('gif-overlay');
+         g.classList.remove('animate-gif');
+         void g.offsetWidth; /* Перезапуск анимации */
+         g.classList.add('animate-gif');"
+       style="
+          position: fixed;
+          top: 75px; 
+          right: 20px; 
+          width: 30px; 
+          z-index: 10000; 
+          cursor: pointer;
+          transition: transform 0.1s;
+       " 
+       alt="amogus">
+  <div id="wrapper">
+    {% include "navigation.html" %}
+    <div class="container my-3">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}{% endblock content %}
+        </div>
+        {% include "side_navigation.html" %}
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </div>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+  <script>
+    function playRandomMeow() {
+        const total = 26; // Укажи сколько у тебя файлов m_
+        const randomNum = Math.floor(Math.random() * total) + 1;
+        const sound = document.getElementById('meow_' + randomNum);
+        if (sound) {
+            sound.currentTime = 0;
+            sound.play();
+        }
+    }
+
+    function highlightMeows() {
+        const wordToFind = "Мяу";
+        const regex = new RegExp(`(${wordToFind})`, 'gi');
+        
+        // Ищем во всех текстовых элементах: заголовки, параграфы, ссылки, карточки
+        const elements = document.querySelectorAll('p, h1, h2, h5, .card-title, .nav-link, a');
+
+        elements.forEach(el => {
+            // Проверяем, нет ли внутри уже других тегов, чтобы не сломать верстку
+            if (el.children.length === 0 && el.innerText.includes(wordToFind)) {
+                el.innerHTML = el.innerHTML.replace(regex, 
+                    `<span onclick="playRandomMeow()" style="cursor: pointer; font-weight: bold;">$1</span>`
+                );
+            }
+        });
+    }
+
+    // Запускаем при загрузке каждой страницы
+    window.addEventListener('DOMContentLoaded', highlightMeows);
+</script>
+</body>
+</html>

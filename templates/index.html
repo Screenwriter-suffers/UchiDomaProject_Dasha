@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}
+  Главная страница
+{% endblock title %}
+{% block content %}
+  <h1>Главная</h1>
+  <hr>
+  {% for news in news %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ news.title }}</h5>
+      <p class="card-text">{{ news.text|truncate(100) }}</p>
+      <a href="{{ url_for('news_detail', id=news.id) }}" class="btn btn-primary">Читать далее</a>
+    </div>
+    <div class="card-footer">
+      {% if news.created_date %}
+        <span class="card-link">Дата создания: {{ news.created_date.strftime('%d.%m.%Y') }}</span>
+      {% endif %}
+      {% if news.category %}
+        <span class="card-link">Категория: <a href="{{ url_for('news_in_category', id=news.category.id) }}">{{ news.category.title }}</a></span>
+      {% endif %}
+    </div>
+  </div>
+  {% else %}
+  <p class="card-text">Новостей пока нет!</p>
+  {% endfor %}
+
+  
+
+  {% if request.args.get('show_lol') %}
+  <audio id="click-sound" src="{{ url_for('static', filename='Videos/sus.mp3') }}" preload="auto"></audio>
+      <div id="yor_face_now_img" style="
+        position: fixed;
+        bottom: 600px;
+        right: 150px;
+        z-index: 1000;
+      ">
+        <img src="{{ url_for('static', filename='Videos/lol.png') }}" 
+            onclick="let s=document.getElementById('click-sound'); s.currentTime=0; s.play();"
+            style="width: 400px; filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0));" 
+            alt="твоё лицо сейчас">
+      </div>
+  {% endif %}
+  <script>
+    if (performance.navigation.type === 1) {
+        const secretImg = document.getElementById('yor_face_now_img');
+        if (secretImg) secretImg.style.display = 'none';
+        
+        window.history.replaceState({}, document.title, "/");
+    }
+  </script>
+
+
+<style>
+  /* Перекрашиваем все синие ссылки (категории) */
+  a {
+    color: #b9c129 ; /* Здесь ставь любой цвет вместо синего */
+  }
+
+  /* Перекрашиваем синюю кнопку "Читать далее" */
+  .btn-primary {
+    background-color: #5c7148 !important; /* Цвет кнопки */
+    border-color: #5c7148 !important;   /* Цвет рамки кнопки */
+  }
+
+  /* Цвет кнопки при наведении */
+  .btn-primary:hover {
+    background-color: #aeb89f !important;
+    color: black !important;
+  }
+</style>
+{% endblock content %}
