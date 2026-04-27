@@ -113,7 +113,7 @@
 
   <script>
     function playRandomMeow() {
-        const total = 26; // Укажи сколько у тебя файлов m_
+        const total = 26; 
         const randomNum = Math.floor(Math.random() * total) + 1;
         const sound = document.getElementById('meow_' + randomNum);
         if (sound) {
@@ -126,11 +126,9 @@
         const wordToFind = "Мяу";
         const regex = new RegExp(`(${wordToFind})`, 'gi');
         
-        // Ищем во всех текстовых элементах: заголовки, параграфы, ссылки, карточки
         const elements = document.querySelectorAll('p, h1, h2, h5, .card-title, .nav-link, a');
 
         elements.forEach(el => {
-            // Проверяем, нет ли внутри уже других тегов, чтобы не сломать верстку
             if (el.children.length === 0 && el.innerText.includes(wordToFind)) {
                 el.innerHTML = el.innerHTML.replace(regex, 
                     `<span onclick="playRandomMeow()" style="cursor: pointer; font-weight: bold;">$1</span>`
@@ -139,7 +137,6 @@
         });
     }
 
-    // Запускаем при загрузке каждой страницы
     window.addEventListener('DOMContentLoaded', highlightMeows);
 </script>
 </body>
