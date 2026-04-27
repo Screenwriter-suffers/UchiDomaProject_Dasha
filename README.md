@@ -12,7 +12,7 @@
 1. Скопируй репозиторий.
 2. Создай виртуальное окружение: `py -m venv .venv`
 3. активируй виртуальное окружение:
-* Mac/Linux: `source .venv/Scripts/activate`
+* Mac/Linux: `source .venv/bin/activate`
 * Windows: `.venv\Scripts\activate`
 
 4. напиши это в консоль: `pip install flask flask-sqlalchemy flask-wtf`
